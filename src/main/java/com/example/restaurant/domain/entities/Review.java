@@ -34,6 +34,7 @@ public class Review {
     @Field(type = FieldType.Date, format = DateFormat.date_hour_minute_second)
     private LocalDateTime lastEdited;
 
+    @Builder.Default
     @Field(type = FieldType.Nested)
     private List<Photo> photos = new ArrayList<>();
 

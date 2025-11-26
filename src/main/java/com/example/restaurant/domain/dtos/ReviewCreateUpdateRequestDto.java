@@ -27,5 +27,6 @@ public class ReviewCreateUpdateRequestDto {
     @Max(value = 5, message = "Rating must be between 1 and 5")
     private Integer rating;
 
+    @Builder.Default
     private List<String> photoIds = new ArrayList<>();
 }

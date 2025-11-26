@@ -8,10 +8,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import org.springframework.data.elasticsearch.annotations.GeoPointField;
-import org.springframework.data.elasticsearch.core.geo.GeoPoint;
-
-import com.example.restaurant.domain.entities.*;
 
 @Data
 @AllArgsConstructor
@@ -35,8 +31,10 @@ public class RestaurantDto {
 
     private OperatingHoursDto operatingHours;
 
+    @Builder.Default
     private List<PhotoDto> photos = new ArrayList<>();
 
+    @Builder.Default
     private List<ReviewDto> reviews = new ArrayList<>();
 
     private UserDto createdBy;

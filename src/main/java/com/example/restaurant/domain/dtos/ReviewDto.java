@@ -25,6 +25,7 @@ public class ReviewDto {
 
     private LocalDateTime lastEdited;
 
+    @Builder.Default
     private List<PhotoDto> photos = new ArrayList<>();
 
     private UserDto writtenBy;
